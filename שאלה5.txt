@@ -1,0 +1,19 @@
+#include <stdio.h>
+
+int main()
+{
+    int salary;
+    printf("Enter salary: ");
+    scanf("%d", &salary);
+    if (salary < 6000)
+    {
+        salary = salary * 1.1;
+        printf("Salary after raise: %d", salary);
+    }
+    else
+    {
+        salary = salary * 1.05;
+        printf("Salary after raise: %d", salary);
+    }
+    return 0;
+}
