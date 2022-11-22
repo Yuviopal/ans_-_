@@ -1,0 +1,26 @@
+#include <stdio.h>
+
+int main()
+{
+	int age;
+	float grade;
+	int score;
+	
+	printf("Enter your age: ");
+	scanf("%d", &age);
+	printf("Enter your grade: ");
+	scanf("%f", &grade);
+	printf("Enter your score: ");
+	scanf("%d", &score);
+	
+	if (age >= 20 && age <= 40 && grade >= 90 && score >= 650)
+	{
+		printf("You are accepted");
+	}
+	else
+	{
+		printf("You are not accepted");
+	}
+	
+	return 0;
+}
