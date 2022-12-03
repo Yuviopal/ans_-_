@@ -1,0 +1,16 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+int main()
+{
+	int a, b, i;
+	srand(time(NULL));
+	printf("Enter two numbers: ");
+	scanf("%d %d", &a, &b);
+	for (i = 0; i < 20; i++)
+	{
+		printf("%d\n", rand() % (b - a + 1) + a);
+	}
+	return 0;
+}

@@ -1,0 +1,60 @@
+#include <stdio.h>
+
+#include <stdio.h>
+
+int number(void);
+int sum_of_digits(int);
+int digits(int);
+void print(int);
+
+int main(void)
+{
+    int n, sum;
+
+    n = number();
+    sum = sum_of_digits(n);
+    print(sum);
+
+    return 0;
+}
+
+int number(void)
+{
+    int n;
+
+    printf("Enter a number: ");
+    scanf("%d", &n);
+
+    return n;
+}
+
+int sum_of_digits(int n)
+{
+    int sum = 0;
+
+    while (n != 0)
+    {
+        sum += n % 10;
+        n /= 10;
+    }
+
+    return sum;
+}
+
+int digits(int n)
+{
+    int digits = 0;
+
+    while (n != 0)
+    {
+        digits++;
+        n /= 10;
+    }
+
+    return digits;
+}
+
+void print(int sum)
+{
+    printf("The sum of the digits is: %d\n", sum);
+}

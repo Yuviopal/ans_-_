@@ -1,0 +1,23 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+int main()
+{
+	int guess, rand_num, counter = 0;
+	srand(time(NULL));
+	printf("Enter a number between 1 and 100: ");
+	scanf("%d", &guess);
+	while (guess < 1 || guess > 100)
+	{
+		printf("Invalid input, try again: ");
+		scanf("%d", &guess);
+	}
+	while (guess != rand_num)
+	{
+		rand_num = rand() % 100 + 1;
+		counter++;
+	}
+	printf("The number %d was guessed after %d tries\n", guess, counter);
+	return 0;
+}

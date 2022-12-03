@@ -1,0 +1,20 @@
+/* Write a program that receives integers as long as their cumulative sum is less than 100. Print the number of values ​​received. */
+
+#include <stdio.h>
+
+int main()
+{
+    int n, sum = 0, count = 0;
+
+    do
+    {
+        printf("Enter a number: ");
+        scanf("%d", &n);
+        sum += n;
+        count++;
+    } while (sum < 100);
+
+    printf("The number of values received is %d.\n", count);
+
+    return 0;
+}

@@ -1,0 +1,32 @@
+#include <stdio.h>
+
+int main()
+{
+    int weight, boxA = 0, boxB = 0;
+
+    while(boxA < 50 && boxB < 50)
+    {
+        printf("Enter the weight of the apple: ");
+        scanf("%d", &weight);
+
+        if(weight >= 150 && weight <= 250)
+        {
+            boxA++;
+        }
+        else
+        {
+            boxB++;
+        }
+    }
+
+    if(boxA == 50)
+    {
+        printf("Box A is full.\n");
+    }
+    else
+    {
+        printf("Box B is full.\n");
+    }
+
+    return 0;
+}

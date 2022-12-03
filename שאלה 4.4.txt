@@ -1,0 +1,44 @@
+
+#include <stdio.h>
+
+int A(int x)
+{
+    int a;
+    a=x/100;
+    return a;
+}
+
+int B(int x)
+{
+    int b;
+    b=(x%100)/10;
+    return b;
+}
+
+int C(int x)
+{
+    int c;
+    c=x%10;
+    return c;
+}
+
+int Weight(int x)
+{
+    int w;
+    w=(A(x)*B(x))+(B(x)*C(x));
+    return w;
+}
+
+int main()
+{
+    int x,sum=0;
+    while(sum<100)
+    {
+        printf("Enter a three-digit number:\n");
+        scanf("%d",&x);
+        sum=sum+Weight(x);
+        printf("\nThe weight of the number is: %d",Weight(x));
+        printf("\nThe sum of the weights is: %d\n\n",sum);
+    }
+    return 0;
+}

@@ -1,0 +1,48 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+int tree();
+int pali();
+int coin();
+int times();
+
+int main()
+{
+    int i, tree_count = 0, pali_count = 0;
+    srand(time(NULL));
+    for(i = 0; i < 20; i++)
+    {
+        if(coin() == 1)
+        {
+            tree_count++;
+        }
+        else
+        {
+            pali_count++;
+        }
+    }
+    printf("Tree count: %d\n", tree_count);
+    printf("Pali count: %d\n", pali_count);
+    return 0;
+}
+
+int tree()
+{
+    return 1;
+}
+
+int pali()
+{
+    return 2;
+}
+
+int coin()
+{
+    return rand() % 2 + 1;
+}
+
+int times()
+{
+    return 20;
+}

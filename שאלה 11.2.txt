@@ -1,0 +1,27 @@
+#include <stdio.h>
+
+int main()
+{
+    int i, num, max, pos;
+
+    for(i = 1; i <= 20; i++)
+    {
+        printf("Enter a number: ");
+        scanf("%d", &num);
+
+        if(i == 1)
+        {
+            max = num;
+            pos = i;
+        }
+        else if(num > max)
+        {
+            max = num;
+            pos = i;
+        }
+    }
+
+    printf("The highest number is %d and it is the %dth number you entered.\n", max, pos);
+
+    return 0;
+}

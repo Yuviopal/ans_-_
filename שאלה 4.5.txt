@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+int main()
+{
+    int Number, reverse = 10, reversedNumber = 0, reversalprocesses;
+
+    printf("Enter an integer: ");
+    scanf("%d", &Number);
+
+    while(Number != 0)
+    {
+        reversalprocesses = Number%reverse;
+        reversedNumber = reversedNumber*reverse + reversalprocesses;
+        Number /= reverse;
+    }
+
+    printf("Reversed Number = %d", reversedNumber);
+
+    return 0;
+}

@@ -1,0 +1,42 @@
+
+#include <stdio.h>
+
+int number(int);
+int digit(int);
+int count(int, int);
+
+int main()
+{
+    int num, dig, cnt;
+    printf("Enter a number: ");
+    scanf("%d", &num);
+    printf("Enter a digit: ");
+    scanf("%d", &dig);
+    cnt = count(num, dig);
+    printf("The digit %d appears %d times in the number %d", dig, cnt, num);
+    return 0;
+}
+
+int number(int num)
+{
+    return num;
+}
+
+int digit(int dig)
+{
+    return dig;
+}
+
+int count(int num, int dig)
+{
+    int cnt = 0;
+    while(num != 0)
+    {
+        if(num % 10 == dig)
+        {
+            cnt++;
+        }
+        num /= 10;
+    }
+    return cnt;
+}

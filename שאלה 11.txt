@@ -1,0 +1,43 @@
+#include <stdio.h>
+
+void yes_triangle(int a, int b, int c);
+void no_triangle(int a, int b, int c);
+void digits(int a, int b, int c);
+
+int main()
+{
+	int a, b, c;
+	printf("Enter the length of 3 sides of a triangle: ");
+	scanf("%d %d %d", &a, &b, &c);
+	digits(a, b, c);
+	return 0;
+}
+
+void yes_triangle(int a, int b, int c)
+{
+	if (a + b > c && a + c > b && b + c > a)
+	{
+		printf("Triangle");
+	}
+}
+
+void no_triangle(int a, int b, int c)
+{
+	if (a + b <= c || a + c <= b || b + c <= a)
+	{
+		printf("Not Triangle");
+	}
+}
+
+void digits(int a, int b, int c)
+{
+	if (a > 0 && b > 0 && c > 0)
+	{
+		yes_triangle(a, b, c);
+		no_triangle(a, b, c);
+	}
+	else
+	{
+		printf("Not Triangle");
+	}
+}

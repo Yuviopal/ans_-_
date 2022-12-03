@@ -1,0 +1,17 @@
+#include <stdio.h>
+#include <math.h>
+
+int main()
+{
+    int x, y, i, result;
+    printf("Enter the value of x: ");
+    scanf("%d", &x);
+    printf("Enter the value of y: ");
+    scanf("%d", &y);
+    for(i=1; i<=y; i++)
+    {
+        result = pow(x, i);
+        printf("%d^%d = %d\n", x, i, result);
+    }
+    return 0;
+}

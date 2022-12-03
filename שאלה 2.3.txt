@@ -1,0 +1,14 @@
+#include <stdio.h>
+
+int main()
+{
+	int num1, num2, i, sum = 0;
+	printf("Enter two numbers:\n");
+	scanf("%d%d", &num1, &num2);
+	for (i = 0; i < num2; i++)
+	{
+		sum += num1;
+	}
+	printf("\nMultiplying the numbers equals: %d\n", sum);
+	return 0;
+}

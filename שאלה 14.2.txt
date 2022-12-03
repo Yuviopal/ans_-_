@@ -1,0 +1,51 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+int cube1();
+int cube2();
+void this_is_backgammon();
+void this_is_not_backgammon();
+
+int main()
+{
+    int i;
+    int counter = 0;
+    srand(time(NULL));
+    for(i = 0; i < 20; i++)
+    {
+        if(cube1() == cube2())
+        {
+            this_is_backgammon();
+            counter++;
+        }
+        else
+        {
+            this_is_not_backgammon();
+        }
+    }
+    printf("\nThe dice were draw \"Backgammon\" %d times.", counter);
+    return 0;
+}
+
+int cube1()
+{
+    int cube1 = rand() % 6 + 1;
+    return cube1;
+}
+
+int cube2()
+{
+    int cube2 = rand() % 6 + 1;
+    return cube2;
+}
+
+void this_is_backgammon()
+{
+    printf("\nThis is backgammon!");
+}
+
+void this_is_not_backgammon()
+{
+    printf("\nThis is not backgammon!");
+}

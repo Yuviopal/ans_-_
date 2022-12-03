@@ -1,0 +1,26 @@
+#include <stdio.h>
+
+int main()
+{
+	int a, b, c, d;
+	int flag = 0;
+	printf("Please enter 4 different digits: ");
+	scanf("%d %d %d %d", &a, &b, &c, &d);
+	if (a == b || a == c || a == d || b == c || b == d || c == d)
+	{
+		printf("The digits you entered are not different\n");
+		flag = 1;
+	}
+	if (flag == 0)
+	{
+		if (a + b == c + d || a + c == b + d || a + d == b + c)
+		{
+			printf("The digits you entered can be divided into two pairs so that the amount of numbers in one pair is equal to that of the numbers in the other pair\n");
+		}
+		else
+		{
+			printf("The digits you entered cannot be divided into two pairs so that the amount of numbers in one pair is equal to that of the numbers in the other pair\n");
+		}
+	}
+	return 0;
+}

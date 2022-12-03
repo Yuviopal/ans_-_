@@ -1,0 +1,24 @@
+
+#include <stdio.h>
+
+int main()
+{
+    int grade, sum = 0, count = 0;
+    float avg;
+    printf("Enter grade: ");
+    scanf("%d", &grade);
+    while (sum < 999)
+    {
+        if (grade >= 0 && grade <= 100)
+        {
+            sum += grade;
+            count++;
+        }
+        printf("Enter grade: ");
+        scanf("%d", &grade);
+    }
+    avg = (float)sum / count;
+    printf("The number of legal grades taken: %d\n", count);
+    printf("The grade point average: %.2f\n", avg);
+    return 0;
+}

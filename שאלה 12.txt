@@ -1,0 +1,50 @@
+#include <stdio.h>
+#include <math.h>
+
+void equilateral_triangle(float a, float b, float c);
+void isosceles_triangle(float a, float b, float c);
+void regular_triangle(float a, float b, float c);
+void triangle_vertices(float a, float b, float c);
+
+int main()
+{
+	float a, b, c;
+	printf("Enter the length of the sides of the triangle: ");
+	scanf("%f %f %f", &a, &b, &c);
+	equilateral_triangle(a, b, c);
+	isosceles_triangle(a, b, c);
+	regular_triangle(a, b, c);
+	triangle_vertices(a, b, c);
+	return 0;
+}
+
+void equilateral_triangle(float a, float b, float c)
+{
+	if (a == b && b == c)
+	{
+		printf("The triangle is equilateral.\n");
+	}
+}
+
+void isosceles_triangle(float a, float b, float c)
+{
+	if (a == b || b == c || a == c)
+	{
+		printf("The triangle is isosceles.\n");
+	}
+}
+
+void regular_triangle(float a, float b, float c)
+{
+	if (a != b && b != c && a != c)
+	{
+		printf("The triangle is regular.\n");
+	}
+}
+
+void triangle_vertices(float a, float b, float c)
+{
+	float p = (a + b + c) / 2;
+	float area = sqrt(p * (p - a) * (p - b) * (p - c));
+	printf("The area of the triangle is %.2f\n", area);
+}

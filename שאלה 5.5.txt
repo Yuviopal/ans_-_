@@ -1,0 +1,140 @@
+#include <stdio.h>
+
+int number1();
+int number2();
+int division(int, int);
+int common_divisors(int, int);
+int greatest_common_divisor(int, int);
+int smallest_divisors(int, int);
+
+int main()
+{
+	int num1, num2, div, com_div, gre_com_div, sma_div;
+	
+	num1 = number1();
+	num2 = number2();
+	div = division(num1, num2);
+	com_div = common_divisors(num1, num2);
+	gre_com_div = greatest_common_divisor(num1, num2);
+	sma_div = smallest_divisors(num1, num2);
+	
+	printf("\nThe division of %d and %d is %d", num1, num2, div);
+	printf("\nThe common divisors of %d and %d are %d", num1, num2, com_div);
+	printf("\nThe greatest common divisor of %d and %d is %d", num1, num2, gre_com_div);
+	printf("\nThe smallest divisors of %d and %d are %d", num1, num2, sma_div);
+	
+	return 0;
+}
+
+int number1()
+{
+	int num1;
+	
+	printf("Enter the first number: ");
+	scanf("%d", &num1);
+	
+	return num1;
+}
+
+int number2()
+{
+	int num2;
+	
+	printf("\nEnter the second number: ");
+	scanf("%d", &num2);
+	
+	return num2;
+}
+
+int division(int num1, int num2)
+{
+	int div;
+	
+	div = num1 / num2;
+	
+	return div;
+}
+
+int common_divisors(int num1, int num2)
+{
+	int com_div;
+	
+	if(num1 > num2)
+	{
+		for(com_div = num2; com_div >= 1; com_div--)
+		{
+			if(num1 % com_div == 0 && num2 % com_div == 0)
+			{
+				break;
+			}
+		}
+	}
+	else
+	{
+		for(com_div = num1; com_div >= 1; com_div--)
+		{
+			if(num1 % com_div == 0 && num2 % com_div == 0)
+			{
+				break;
+			}
+		}
+	}
+	
+	return com_div;
+}
+
+int greatest_common_divisor(int num1, int num2)
+{
+	int gre_com_div;
+	
+	if(num1 > num2)
+	{
+		for(gre_com_div = num2; gre_com_div >= 1; gre_com_div--)
+		{
+			if(num1 % gre_com_div == 0 && num2 % gre_com_div == 0)
+			{
+				break;
+			}
+		}
+	}
+	else
+	{
+		for(gre_com_div = num1; gre_com_div >= 1; gre_com_div--)
+		{
+			if(num1 % gre_com_div == 0 && num2 % gre_com_div == 0)
+			{
+				break;
+			}
+		}
+	}
+	
+	return gre_com_div;
+}
+
+int smallest_divisors(int num1, int num2)
+{
+	int sma_div;
+	
+	if(num1 > num2)
+	{
+		for(sma_div = 1; sma_div <= num2; sma_div++)
+		{
+			if(num1 % sma_div == 0 && num2 % sma_div == 0)
+			{
+				break;
+			}
+		}
+	}
+	else
+	{
+		for(sma_div = 1; sma_div <= num1; sma_div++)
+		{
+			if(num1 % sma_div == 0 && num2 % sma_div == 0)
+			{
+				break;
+			}
+		}
+	}
+	
+	return sma_div;
+}
